@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+    <title>API WARS</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">API WARS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Planet List</a></li>
+            <li><a href="#">Voting Statistics</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {#   here goes code for username display     #}
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Logged in as:</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {#    or login and registration if not logged in    #}
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+
+<h1>Star Wars universe planets</h1>
+<div>
+    <button type="button" class="btn btn-primary" id="previousButton" data-url="https://swapi.co/api/planets/">Previous</button>
+    <button type="button" class="btn btn-primary" id="nextButton" data-url="https://swapi.co/api/planets/">Next</button>
+</div>
+
+{% block content %}
+
+
+
+
+
+{% endblock %}
+
+{% include 'residentsModal.html' %}
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+<script src="/static/get_planets.js" defer></script>
+
+</body>
+</html>
